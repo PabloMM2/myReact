@@ -1,0 +1,54 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    
+}
+
+.navbar {
+    height: 100px;
+    width: 100%;
+    background-color: blue;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    color: white;
+}
+
+.sidebar {
+    width: 200px;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: -300px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px;
+    color: white;
+    background-color: red;
+}
+
+.sidebar-ver {
+    animation: visualizar 1s;
+    animation-fill-mode: forwards;
+}
+
+.sidebar-ocultar {
+    animation: ocultar 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes visualizar {
+    0% {left: -300px;}
+    100% {left: 0px;}
+}
+@keyframes ocultar {
+    0% {left: 0px;}
+    100% {left: -300px;}
+  }
